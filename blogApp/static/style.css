@@ -1,0 +1,19 @@
+/* ==================================== ESTILOS GENERALES ===============================
+=======================================================================================*/
+/* MODELO CAJA */
+html{
+    box-sizing: border-box;
+}
+
+*,*:after,*:before{
+    box-sizing: inherit;
+}
+/* MI NORMALIZE */
+header ul{
+    margin:0;
+    padding:0;
+}
+
+body{
+    margin:0;
+}
