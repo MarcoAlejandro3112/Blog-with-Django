@@ -2,22 +2,29 @@ header{
     background-color:#20232A;
 }
 
-nav ul div li{
-    list-style: none;
+header a{
     color:#fff;
-    text-align: center;
-    font-family: "Roboto",sans-serif;
-    align-self: center;
-    font-weight: 300;
-    padding:0.5rem 0rem;
-    font-size:1.1rem;
+    text-decoration: none;
 }
 
-nav ul div li:hover{
+nav ul div li{
+    list-style: none;
+    padding:0.5rem 0rem;
+    text-align: center;
+}
+
+nav ul div li a{
+    color:#fff;
+    font-family: "Roboto",sans-serif;
+    font-weight: 300;
+    font-size:1.1rem;
+}
+nav ul div li:hover a{
     color:#29F2E3;
+    cursor:pointer;
 }
 /*LOGO*/
-span.logo{
+span.logo a{
     font-weight: 700;
     color:#29F2E3;
     font-size: 1.2rem;
@@ -40,12 +47,13 @@ span.logo{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        padding: 1rem;
+        padding: 1rem 0rem;
     }
     nav ul div {
         display: grid;
-        grid-template-columns: repeat(3,auto);
         column-gap: 2rem;
+        display:flex;
+        flex-direction: row;
     }
 
     nav ul div li{

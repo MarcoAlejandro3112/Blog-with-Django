@@ -18,5 +18,6 @@ from django.urls import path
 from blogApp import views
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.index),
+    path('',views.index,name="blogApp_index"),
+    path('acerca/',views.about,name="blogApp_about"),
 ]

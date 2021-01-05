@@ -1,32 +1,28 @@
-{% load static %}
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>Blog</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'style.css' %}">
-    <link rel="stylesheet" href="{% static 'header.css' %}">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <div>
-                    <li><span class="logo">Lapsus</span></li>
-                    <li>Acerca de</li>
-                    <li>Cursos</li>
+{% extends "base.html" %}
+{% block content %}
+    <section class="box_entries">
+    {% for post in posts %}
+        <section class="box_entry">
+            <div class="container">
+                <div class="box_entry_title">
+                    <h2>{{ post.title }}</h2>
                 </div>
-                <div>
-                    <li>Nuevo Post</li>
-                    <li>Perfil</li>
-                    <li>Cerrar Sesión</li>
+                <div class="box_entry_data">
+                    <p>{{ post.date_posted|date:"F d, Y" }} by <a href="#">{{ post.author }}</a></p>
                 </div>
-            </ul>
-        </nav>
-    </header>
-</body>
-</html>
+                <div class="box_entry_description">
+                    <p>{{ post.content }}.</p>
+                </div>
+                <div class="box_entry_category">
+
+                        <p>Topic: <a href="">{{ post.categoria }}</a></p>
+
+                    <a href="#">Read More...</a>
+                </div>
+            </div>
+        </section>
+    {% endfor %}
+    </section>
+    <aside>
+    </aside>
+{% endblock content %}

@@ -1,4 +1,9 @@
 from django.shortcuts import render
+from .models import Post
 def index(request):
-    return render(request, 'index.html')
-
+    context = {
+        'posts':Post.objects.all()
+    }
+    return render(request, 'index.html',context)
+def about(request):
+    return render(request,'about.html',{'title':'About'})
