@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <section class="box boxRegister">
+        <form method="POST">
+            {% csrf_token %}
+            <div class="headerRegister">Sign Up</div>
+            <div class="formRegister">
+                {{ form|crispy}}
+            </div>
+            <div class="footerRegister">
+                <button class="btn" type="submit">Sign Up</button>
+            </div>
+        </form>
+        <div class="loginRegister">
+            <p>Already have an account? <a href="#"> Log in</a></p>
+        </div>
+    </section>
+{% endblock content %}

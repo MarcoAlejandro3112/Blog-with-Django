@@ -16,8 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from blogApp import views
+from users import views as viewsU
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.index,name="blogApp_index"),
     path('acerca/',views.about,name="blogApp_about"),
+    path('register/',viewsU.register,name="users_register"),
 ]
