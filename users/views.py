@@ -2,6 +2,7 @@ from django.shortcuts import render,redirect
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
 from .forms import UserRegisterForm
+from django.contrib.auth.decorators import login_required
 # Create your views here.
 def register(request):
     if request.method == 'POST':
@@ -13,4 +14,7 @@ def register(request):
             return redirect('blogApp_index')
     else:
         form = UserRegisterForm()
-    return render(request,'register.html',{'form':form,'title':'Register'})
+    return render(request,'register.html',{'form':form,'bootstrap':'yes'})
+@login_required
+def profile(request):
+    return render(request,'profile.html')

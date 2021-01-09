@@ -7,16 +7,16 @@
     <section class="box boxRegister">
         <form method="POST">
             {% csrf_token %}
-            <div class="headerRegister">Sign Up</div>
+            <div class="headerRegister">Log in</div>
             <div class="formRegister">
                 {{ form|crispy}}
             </div>
             <div class="footerRegister">
-                <button class="btn" type="submit">Sign Up</button>
+                <button class="btn" type="submit">Login</button>
             </div>
         </form>
         <div class="loginRegister">
-            <p>Already have an account? <a href="{% url 'login' %}"> Log in</a></p>
+            <p>Don't have an account? <a href="{% url 'users_register' %}"> Sign up</a></p>
         </div>
     </section>
 {% endblock content %}
