@@ -1,24 +1,30 @@
 {% extends "base.html" %}
 {% block content %}
     <main>
-    <section class="box_entries">
-    {% for post in posts %}
-        <section class="box_entry">
-            <div class="container">
-                <div class="box_entry_title">
-                    <h3><a href="">{{ post.title }}</a></h3>
-                </div>
-                <div class="box_entry_data">
-                    <p>{{ post.date_posted|date:"F d, Y" }} by <a href="#">{{ post.author }}</a> | <a href="">{{ post.categoria }}</a></p>
-                </div>
-                <div class="box_entry_description">
-                    <p>{{ post.summary }}.</p>
-                </div>
-            </div>
-        </section>
-    {% endfor %}
-    </section>
-    <aside>
-    </aside>
+        <div class="box-index container">
+            <section class="entries  box">
+            {% for post in posts %}
+                <section class="entry">
+                    <div>
+                        <h3 class="entry__title"><a class="link1" href="">{{ post.title }}</a></h3>
+                    </div>
+                    <div>
+                        <p class="entry__data">{{ post.date_posted|date:"F d, Y" }} by <a href="#" class="link1">{{ post.author }}</a> | <a class="link1" href="#">{{ post.categoria }}</a></p>
+                    </div>
+                    <div>
+                        <p class="entry__description">{{ post.summary }}.</p>
+                    </div>
+                </section>
+            {% endfor %}
+            </section>
+            <aside>
+                <section class="articles box">
+                    <h3 class="articles__title">Mejores Articulos</h3>
+                    <ul>
+                        <li class="articles__li"><span class="articles__number">01</span><a class="articles__a link1" href="#"> Lorem Ipsum Dolor Sit Amet</a></li>
+                    </ul>
+                </section>
+            </aside>
+        </div>
     </main>
 {% endblock content %}
