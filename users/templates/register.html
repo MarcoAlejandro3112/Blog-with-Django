@@ -1,18 +1,18 @@
 {% extends "base.html" %}
 {% load crispy_forms_tags %}
 {% block content %}
-    <section class="box boxRegister">
+    <section class="box box-form">
         <form method="POST">
             {% csrf_token %}
-            <div class="headerRegister">Sign Up</div>
-            <div class="formRegister">
+            <div class="box-form__header"><p>Sign Up</p></div>
+            <div class="box-form__input">
                 {{ form|crispy}}
             </div>
-            <div class="footerRegister">
+            <div class="box-form__box-button">
                 <button class="btn" type="submit">Sign Up</button>
             </div>
         </form>
-        <div class="loginRegister">
+        <div class="box-form__footer">
             <p>Already have an account? <a href="{% url 'login' %}"> Log in</a></p>
         </div>
     </section>

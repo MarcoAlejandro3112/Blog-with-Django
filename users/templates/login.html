@@ -4,18 +4,18 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 {% endblock %}
 {% block content %}
-    <section class="box boxRegister">
+    <section class="box box-form">
         <form method="POST">
             {% csrf_token %}
-            <div class="headerRegister">Log in</div>
-            <div class="formRegister">
+            <div class="box-form__header">Log in</div>
+            <div class="box-form__input">
                 {{ form|crispy}}
             </div>
-            <div class="footerRegister">
+            <div class="box-form__box-button">
                 <button class="btn" type="submit">Login</button>
             </div>
         </form>
-        <div class="loginRegister">
+        <div class="box-form__footer">
             <p>Don't have an account? <a href="{% url 'users_register' %}"> Sign up</a></p>
         </div>
     </section>

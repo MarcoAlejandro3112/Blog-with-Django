@@ -2,7 +2,7 @@
 {% block content %}
     <main>
         <div class="box-index container">
-            <section class="entries  box">
+            <section class="entries">
             {% for post in posts %}
                 <section class="entry">
                     <div>
@@ -18,13 +18,36 @@
             {% endfor %}
             </section>
             <aside>
-                <section class="articles box">
-                    <h3 class="articles__title">Mejores Articulos</h3>
+                <section class="articles">
+                    <h3 class="articles__title">Popular Articles</h3>
                     <ul>
-                        <li class="articles__li"><span class="articles__number">01</span><a class="articles__a link1" href="#"> Lorem Ipsum Dolor Sit Amet</a></li>
+                        <li class="articles__li">
+                            <div>
+                                <p class="articles__number">01</p>
+                            </div>
+                            <div>
+                                <a class="articles__a link1" href="#"> Lorem Ipsum Dolor Sit Amet</a>
+                                <p>January 13, 2021</p>
+                            </div>
+                        </li>
                     </ul>
+
+
+
                 </section>
             </aside>
         </div>
     </main>
-{% endblock content %}
+{% endblock content%}
+
+
+
+
+
+
+
+
+
+
+
+

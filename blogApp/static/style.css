@@ -4,6 +4,8 @@
  *  02. Homepage
  *      2.1 Blog Entries
  *      2.2 Aside
+ *  03. Forms
+ *  04. Profile
  * ===================================================================
  */
 
@@ -31,7 +33,13 @@ main{
     color:#20232A;
     background-color: #29F2E3;
     font-weight: 700;
-    width: 100%;/*CHANGE THIS RIGHT NOW*/
+    border:none;
+    padding: 1rem 0rem;
+}
+
+.box{
+    background-color: #fff;
+    border:1px solid #D0D3D4;
 }
 
 .link1,.link1:visited{
@@ -121,7 +129,6 @@ main{
     text-decoration:none;
 }
 
-
 /**
  * ===================================================================
  * 2.2 Aside
@@ -133,56 +140,142 @@ main{
 }
 
 .articles__title{
-    text-transform: uppercase;
-    color:#20232A;
-    font-weight: bold;
+    font-weight:bold;
     margin-bottom: 1rem;
+}
+
+.articles__li{
+    display: flex;
+    flex-direction: row;
+    align-items:center;
 }
 
 .articles__number{
     color:#29F2E3;
     font-weight: bold;
-    font-size:2rem;
+    font-size:3rem;
     margin-right: 1rem;
 }
 
 .articles__a{
     color:#20232A;
 }
-/* REGISTER */
-.boxRegister{
+
+/**
+ * ===================================================================
+ * 03. Sign Up Form
+ *
+ * -------------------------------------------------------------------
+ */
+
+.box-form{
     width: 90%;
     max-width: 320px;
     margin:2rem auto;
 }
-.formRegister{
+.box-form__header,.box-form__input,.box-form__box-button,.box-form__footer{
+    padding: 1rem;
+}
+.box-form__header{
+    border-bottom:1px solid #D0D3D4;
+    font-weight: bold;
+}
+.box-form__input{
     display: grid;
     grid-gap:1rem;
 }
-.formRegister small{
+
+.box-form__input input{
+    width: 100%;
+    padding: .4rem 0rem;
+    margin-top: .6rem;
+    border:1px solid #D0D3D4;
+    border-radius:3px;
+}
+.box-form__input input[type="file"]{
+    border:none;
+    padding: initial;
+}
+.box-form__input small{
     display: none;
 }
-.boxRegister div.headerRegister,div.formRegister,div.footerRegister{
-    padding: 1rem;
-}
-.boxRegister div.footerRegister{
+
+.box-form__box-button{
     padding-top:0rem;
 }
-.boxRegister div.headerRegister{
-    border-bottom:1px solid #D0D3D4;
+
+.box-form__box-button button{
+    width: 100%;
 }
-.boxRegister div.loginRegister{
+
+.box-form__box-button button:hover{
+    background-color: rgba(50,145,230,0.8);
+    transition: .5s;
+    cursor: pointer;
+}
+
+.box-form__footer{
     padding: 1rem;
     border-top:1px solid #D0D3D4;
     text-align: center;
 }
 
-
-/*PROFILE */
-main.mainProfile {
-    width: 70%;
-    margin:0 auto;
+.box-form__footer a:visited{
+    color:#29F2E3;
 }
-main.mainProfile section.basic_data img{
-    max-width: 10%;
+
+.box-form__footer a:hover{
+    color: rgba(50,145,230,1);
+}
+
+/**
+ * ===================================================================
+ * 04. Profile
+ *
+ * -------------------------------------------------------------------
+ */
+
+.profile {
+    width: 90%;
+    margin:0 auto;
+    display: grid;
+    grid-gap:1rem;
+}
+
+.profile__main-data{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 2rem;
+    padding: 1rem;
+}
+
+.profile__img{
+    margin-bottom: 1rem;
+    max-width: 320px;
+    margin:0px auto;
+}
+
+@media (min-width: 680px){
+    .profile{
+        display: flex;
+    }
+
+    .profile__update{
+        width: 100%;
+    }
+
+}
+
+@media(min-width: 1024px){
+    .profile{
+        width: 70%;
+    }
+
+    .box-form__box-button button{
+        width: auto;
+        padding: 1rem 4rem;
+    }
+
 }
