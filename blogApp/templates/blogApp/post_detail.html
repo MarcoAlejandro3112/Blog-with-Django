@@ -3,19 +3,22 @@
     <main>
         <div class="box-index container">
             <section class="entries">
-            {% for post in posts %}
                 <section class="entry">
                     <div>
-                        <h3 class="entry__title"><a class="link1" href="{% url 'post-detail' post.id %}">{{ post.title }}</a></h3>
+                        <h3 class="entry__title">{{ post.title }}</h3>
                     </div>
                     <div>
                         <p class="entry__data">{{ post.date_posted|date:"F d, Y" }} by <a href="#" class="link1">{{ post.author }}</a> | <a class="link1" href="#">{{ post.categoria }}</a></p>
+                        {% if object.author == user %}
+                            <a class="btn" href="{% url 'post-update' post.id%}">Update</a>
+                            <a class="btn" href="{% url 'post-delete' post.id %}">Delete</a>
+                        {% endif %}
                     </div>
                     <div>
                         <p class="entry__description">{{ post.summary }}.</p>
+                        <p class="entry__description">{{ post.content }}</p>
                     </div>
                 </section>
-            {% endfor %}
             </section>
             <aside>
                 <section class="articles">
@@ -31,23 +34,8 @@
                             </div>
                         </li>
                     </ul>
-
-
-
                 </section>
             </aside>
         </div>
     </main>
 {% endblock content%}
-
-
-
-
-
-
-
-
-
-
-
-

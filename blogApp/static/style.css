@@ -58,6 +58,7 @@ main{
     font-weight: bold;
     transition: .8s;
 }
+
 /**
  * ===================================================================
  * 02. Homepage
@@ -163,16 +164,25 @@ main{
 
 /**
  * ===================================================================
- * 03. Sign Up Form
+ * 03. Forms
  *
  * -------------------------------------------------------------------
  */
 
+
+
 .box-form{
     width: 90%;
     max-width: 320px;
-    margin:2rem auto;
+    margin:4rem auto;
 }
+
+@media (min-width: 1024px){
+    .box-form{
+        width: 50%;
+    }
+}
+
 .box-form__header,.box-form__input,.box-form__box-button,.box-form__footer{
     padding: 1rem;
 }
@@ -185,9 +195,9 @@ main{
     grid-gap:1rem;
 }
 
-.box-form__input input{
+.box-form__input input,textarea,select{
     width: 100%;
-    padding: .4rem 0rem;
+    padding: .4rem 1rem;
     margin-top: .6rem;
     border:1px solid #D0D3D4;
     border-radius:3px;
@@ -196,6 +206,11 @@ main{
     border:none;
     padding: initial;
 }
+
+.box-form__input textarea{
+    resize:none;
+}
+
 .box-form__input small{
     display: none;
 }
@@ -204,14 +219,23 @@ main{
     padding-top:0rem;
 }
 
-.box-form__box-button button{
+.box-form__box-button .btn{
     width: 100%;
 }
 
-.box-form__box-button button:hover{
+.box-form__box-button .btn:hover{
     background-color: rgba(50,145,230,0.8);
     transition: .5s;
     cursor: pointer;
+}
+
+@media(min-width: 640px){
+
+    .box-form__box-button .btn{
+        width: auto;
+        padding: 1rem 4rem;
+    }
+
 }
 
 .box-form__footer{
@@ -227,6 +251,15 @@ main{
 .box-form__footer a:hover{
     color: rgba(50,145,230,1);
 }
+
+.no-width{
+    max-width: none;
+}
+
+.full-width{
+    width: 100%;
+}
+
 
 /**
  * ===================================================================
@@ -271,11 +304,6 @@ main{
 @media(min-width: 1024px){
     .profile{
         width: 70%;
-    }
-
-    .box-form__box-button button{
-        width: auto;
-        padding: 1rem 4rem;
     }
 
 }

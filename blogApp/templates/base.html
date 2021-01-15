@@ -22,13 +22,12 @@
             <ul>
                 <div>
                     <li><span class="logo"><a href="{% url 'blogApp_index' %}">Lapsus</a></span></li>
-                    <li><a href="{% url 'blogApp_about' %}">Acerca de</a></li>
                     <li><a href="">Cursos</a></li>
                 </div>
                 <div>
                     {% if user.is_authenticated %}
                         <li><a href="{% url 'profile' %}">Profile</a></li>
-                        <li><a href=#>Add</a></li>
+                        <li><a href="{% url 'post-create' %}">New Post</a></li>
                         <li><a href="{% url 'logout' %}">Logout</a></li>
                     {% else %}
                         <li><a href="{% url 'login' %}">Login</a></li>

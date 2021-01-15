@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <section class="box box-form no-width">
+        <form method="POST">
+            {% csrf_token %}
+            <div class="box-form__header"><p>Delete Post</p></div>
+            <div class="box-form__input">
+                <h2>Are you sure you want to delete the "{{ post.title }}" post?</h2>
+            </div>
+            <div class="box-form__box-button">
+                <button class="btn" type="submit">Delete</button>
+                <a class="btn" href="{% url 'post-detail' post.id %}">Cancel</a>
+            </div>
+        </form>
+    </section>
+{% endblock content %}
