@@ -30,11 +30,14 @@ main{
     padding:2rem 0rem;
 }
 .btn{
-    color:#20232A;
-    background-color: #29F2E3;
     font-weight: 700;
     border:none;
     padding: 1rem 0rem;
+}
+
+.btn-classic{
+    color:#20232A;
+    background-color: #29F2E3;
 }
 
 .box{
@@ -223,7 +226,7 @@ aside{
     width: 100%;
 }
 
-.box-form__box-button .btn:hover{
+.btn-classic:hover{
     background-color: rgba(50,145,230,0.8);
     transition: .5s;
     cursor: pointer;
@@ -257,7 +260,7 @@ aside{
 }
 
 .full-width{
-    width: 100%;
+    width: 100%!important;
 }
 
 
@@ -355,6 +358,7 @@ aside{
     color: #963200;
 }
 .btn-danger:hover{
+    cursor:pointer;
     background-color: #963200;
     color:#fff;
     transition: .5s;
