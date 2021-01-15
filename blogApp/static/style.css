@@ -135,8 +135,8 @@ main{
  * 2.2 Aside
  * -------------------------------------------------------------------
  */
-.articles{
-    padding: 1rem;
+aside{
+    padding: 1rem 0rem 1rem 1rem;
     line-height: 2rem;
 }
 
@@ -306,4 +306,56 @@ main{
         width: 70%;
     }
 
+}
+
+/**
+ * ===================================================================
+ * 05. Post-Detail
+ *
+ * -------------------------------------------------------------------
+ */
+.post__header h1{
+    margin:0;
+}
+.post__content p{
+    color:#20232A;
+    font-weight: 500;
+}
+.post__content h3{
+    margin:1rem 0rem;
+}
+
+.post__content pre{
+    background-color: #EAEAEA;
+    border: 1px solid #EAEAEA;
+    padding: 1rem;
+}
+
+.post__actions{
+   margin-bottom: 2rem;
+   display: grid;
+    grid-template-columns: 1fr 1fr;
+   grid-gap:1rem;
+}
+.post__actions a{
+   width:100%;
+   text-align: center;
+    padding: .8rem;
+}
+
+.post__actions a:first-child:hover{
+    background-color: rgba(50,145,230,0.8);
+    transition: .5s;
+    cursor: pointer;
+}
+
+.btn-danger{
+    border:1px solid #963200;
+    background-color: transparent;
+    color: #963200;
+}
+.btn-danger:hover{
+    background-color: #963200;
+    color:#fff;
+    transition: .5s;
 }
