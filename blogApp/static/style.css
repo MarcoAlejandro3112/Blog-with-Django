@@ -4,8 +4,10 @@
  *  02. Homepage
  *      2.1 Blog Entries
  *      2.2 Aside
+ *      2.3 Pagination
  *  03. Forms
  *  04. Profile
+ *  05. Post-Detail
  * ===================================================================
  */
 
@@ -107,15 +109,11 @@ main{
     text-align: justify;
     padding: 1rem 0rem;
     border-bottom:1px solid #D0D3D4;
-}
-.entry:last-child{
-    border:none;
-}
-.entry{
     display: grid;
     grid-gap:.5rem;
     line-height: 2rem;
 }
+
 .entry__description{
     font-weight: 300;
 }
@@ -163,6 +161,28 @@ aside{
 
 .articles__a{
     color:#20232A;
+}
+
+/**
+ * ===================================================================
+ * 2.3 Pagination
+ * -------------------------------------------------------------------
+ */
+.pagination{
+    margin-top:2rem;
+    display: flex;
+    flex-direction: row;
+}
+.pagination a{
+    background-color: #29F2E3;
+    padding: 1rem;
+}
+.pagination a:visited{
+    color:#fff;
+}
+
+.active{
+    background-color: cornflowerblue!important;
 }
 
 /**

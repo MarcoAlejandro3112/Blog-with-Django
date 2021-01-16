@@ -19,6 +19,7 @@ class PostListView(ListView):
     template_name = 'index.html'
     context_object_name = 'posts'
     ordering = ['-date_posted']
+    paginate_by = 4
 
 class PostCreateView(CreateView):
     model = Post

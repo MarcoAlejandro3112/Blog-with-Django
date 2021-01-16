@@ -21,7 +21,7 @@
             <aside>
                 <section class="post__actions">
                     {% if object.author == user %}
-                        <a class="btn" href="{% url 'post-update' post.id%}">Update</a>
+                        <a class="btn btn-classic" href="{% url 'post-update' post.id%}">Update</a>
                         <a class="btn btn-danger" href="{% url 'post-delete' post.id %}">Delete</a>
                     {% endif %}
                 </section>
