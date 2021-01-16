@@ -174,17 +174,27 @@ aside{
     flex-direction: row;
 }
 .pagination a{
-    background-color: #29F2E3;
+    border:1px solid #dee2e6;
+    background-color: #fff;
     padding: 1rem;
 }
+
+.pagination a:hover{
+    background-color: rgba(0,0,0,0.1);
+    transition: .6s;
+}
+
 .pagination a:visited{
-    color:#fff;
+    color:#20232A;
 }
 
 .active{
-    background-color: cornflowerblue!important;
+    background-color: #29F2E3!important;
 }
-
+.active:hover{
+    background-color: #29F2E3!important;
+    cursor:text;
+}
 /**
  * ===================================================================
  * 03. Forms
