@@ -8,6 +8,7 @@
  *  03. Forms
  *  04. Profile
  *  05. Post-Detail
+ *  06. Alert
  * ===================================================================
  */
 
@@ -24,7 +25,6 @@
 	text-decoration: none;
 }
 body{
-    background: #F7F7F7;
     font-family: "Roboto",sans-serif;
 }
 main{
@@ -45,6 +45,24 @@ main{
 .box{
     background-color: #fff;
     border:1px solid #D0D3D4;
+}
+
+.link-cat{
+    background-color: #29F2E3;
+    color:#424949;
+    padding:.2rem .4rem;
+    border-radius: 10px;
+    font-size:.95rem;
+    margin-left:.5rem;
+}
+
+.link-cat:visited{
+    color:#424949;
+}
+
+.link-cat:hover{
+    background-color: rgb(36,229,215);
+    transition: .3s;
 }
 
 .link1,.link1:visited{
@@ -105,6 +123,8 @@ main{
  * 2.1 Blog Entries
  * -------------------------------------------------------------------
  */
+
+
 .entry{
     text-align: justify;
     padding: 1rem 0rem;
@@ -114,8 +134,13 @@ main{
     line-height: 2rem;
 }
 
-.entry__description{
-    font-weight: 300;
+.entry:nth-last-child(-n+2){
+    border:none;
+}
+
+
+.soft{
+    color:#7B7D7D;
 }
 
 .entry__title a,.entry__title a:visited{
@@ -172,7 +197,19 @@ aside{
     margin-top:2rem;
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
+
+.pagination a:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.pagination a:last-child {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
 .pagination a{
     border:1px solid #dee2e6;
     background-color: #fff;
@@ -254,6 +291,11 @@ aside{
 
 .box-form__box-button .btn{
     width: 100%;
+    margin-bottom: 1rem;
+}
+
+.box-form__box-button p{
+    text-align: center;
 }
 
 .btn-classic:hover{
@@ -277,11 +319,11 @@ aside{
     text-align: center;
 }
 
-.box-form__footer a:visited{
+.link:visited{
     color:#29F2E3;
 }
 
-.box-form__footer a:hover{
+.link:hover{
     color: rgba(50,145,230,1);
 }
 
@@ -290,6 +332,8 @@ aside{
 }
 
 .full-width{
+    padding-left: 0rem!important;
+    padding-right:0rem!important;
     width: 100%!important;
 }
 
@@ -320,6 +364,7 @@ aside{
 .profile__img{
     margin-bottom: 1rem;
     max-width: 320px;
+    max-height: 200px;
     margin:0px auto;
 }
 
@@ -350,10 +395,11 @@ aside{
 .post__header h1{
     margin:0;
 }
-.post__content p{
+.post__content{
     color:#20232A;
     font-weight: 500;
 }
+
 .post__content h3{
     margin:1rem 0rem;
 }
@@ -392,4 +438,21 @@ aside{
     background-color: #963200;
     color:#fff;
     transition: .5s;
+}
+
+/**
+ * ===================================================================
+ * 06. Alert
+ *
+ * -------------------------------------------------------------------
+ */
+
+.main{
+    width: 70%;
+    margin:0 auto;
+}
+
+.alert{
+    padding:1rem 0rem;
+    border-radius: 5px;
 }

@@ -40,14 +40,14 @@ span.logo a{
 
 @media (min-width: 680px) {
     nav {
-    width: 90%;
-    margin:0px auto;
+        width: 90%;
+        margin:0px auto;
     }
     nav ul {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        padding: 1rem 0rem;
+        padding: 1.5rem 0rem;
     }
     nav ul div {
         display: grid;

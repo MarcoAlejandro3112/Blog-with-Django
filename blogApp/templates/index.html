@@ -9,10 +9,10 @@
                         <h3 class="entry__title"><a class="link1" href="{% url 'post-detail' post.id %}">{{ post.title }}</a></h3>
                     </div>
                     <div>
-                        <p class="entry__data">{{ post.date_posted|date:"F d, Y" }} by <a href="#" class="link1">{{ post.author }}</a> | <a class="link1" href="#">{{ post.categoria }}</a></p>
+                        <p class="entry__data">{{ post.date_posted|date:"F d, Y" }} by <a href="#" class="link1">{{ post.author }}</a> <a class="link-cat" href="#">{{ post.categoria }}</a></p>
                     </div>
                     <div>
-                        <p class="entry__description">{{ post.summary }}</p>
+                        <p class="entry__description soft">{{ post.summary }}</p>
                     </div>
                 </section>
             {% endfor %}

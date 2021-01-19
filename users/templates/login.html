@@ -13,10 +13,11 @@
             </div>
             <div class="box-form__box-button">
                 <button class="btn btn-classic full-width" type="submit">Login</button>
+                <p>or <a class="link" href="{% url 'password_reset' %}"> Forgot Password?</a></p>
             </div>
         </form>
         <div class="box-form__footer">
-            <p>Don't have an account? <a href="{% url 'users_register' %}"> Sign up</a></p>
+            <p>Don't have an account? <a class="link" href="{% url 'users_register' %}"> Sign up</a></p>
         </div>
     </section>
 {% endblock content %}
